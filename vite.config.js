@@ -6,9 +6,18 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+  publicDir: 'src/public',
   server: {
     proxy: {
-      '/molecules': 'http://localhost:3001'
+      '/molecules': {
+        target: 'https://api-natprodb.onrender.com',
+        changeOrigin: true,
+        bypass: (req) => {
+          if (req.url.endsWith('.csv')) {
+            return req.url;
+          }
+        },
+      },
     }
   }
 })

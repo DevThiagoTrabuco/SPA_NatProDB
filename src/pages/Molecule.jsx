@@ -73,15 +73,15 @@ export default function Molecule() {
                 <strong>{t("specie")}:</strong> {molecule.especie}
               </p>
               <p>
-                <strong>{("biological-activity")}:</strong>{" "}
+                <strong>{t("biological-activity")}:</strong>{" "}
                 {molecule.atividadeBiologica}
               </p>
               <h2 className="text-2xl font-bold pt-6 pb-2 border-b text-gray-800">
-                {("physical-chemical-properties")}
+                {t("physical-chemical-properties")}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 pt-2">
                 <p>
-                  <strong>{("molecular-mass")}:</strong> {molecule.massaMolecular}
+                  <strong>{t("molecular-mass")}:</strong> {molecule.massaMolecular}
                 </p>
                 <p>
                   <strong>HBA (Aceitadores de Lig. de Hidrogênio):</strong>{" "}
